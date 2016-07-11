@@ -22,8 +22,9 @@
 	},
 	"homepage": "https://github.com/new-challenger/ascii-server#readme",
 	"dependencies": {
-		"figlet": "^1.1.2",
-		"express": "4.13.3"
+		"cors": "^2.7.1",
+		"express": "4.13.3",
+		"figlet": "^1.1.2"
 	},
 	"devDependencies": {
 		"grunt": "1.0.1",

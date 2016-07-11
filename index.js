@@ -9,6 +9,10 @@
 let express = require('express');
 let app = express();
 
+//Allow cors
+let cors = require('cors');
+app.use(cors());
+
 //Load up the Ascii Service class
 let asciify = require('./lib/ascii-service');
 
