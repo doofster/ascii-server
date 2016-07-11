@@ -22,10 +22,10 @@ let asciify = require('./lib/ascii-service');
 app.set('port', (process.env.PORT || 5000));
 
 //Suggest endpoint
-app.get('/asciify/suggest', cors(corsOptions), asciify.suggest);
+app.post('/asciify/suggest', cors(corsOptions), asciify.suggest);
 
 //Resolve endpoint
-app.get('/asciify/resolve', cors(corsOptions), asciify.resolve);
+app.post('/asciify/resolve', cors(corsOptions), asciify.resolve);
 
 //Spin up server
 app.listen(app.get('port'), function() {
