@@ -1,3 +1,5 @@
 {
-	"font": "Diet Cola"
+	"font": "Diet Cola",
+	"horizontalLayout": "default",
+	"verticalLayout": "default"
 }
