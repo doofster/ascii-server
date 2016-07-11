@@ -8,11 +8,12 @@
 //Set up the app to use the Express module
 let express = require('express');
 let app = express();
+let cors = require('cors');
 
-// Whitelist Mixmax
+//Whitelist Mixmax
 var corsOptions = {
-  origin: /^[^.\s]+\.mixmax\.com$/,
-  credentials: false
+	origin: /^[^.\s]+\.mixmax\.com$/,
+	credentials: true
 };
 
 //Load up the Ascii Service class
