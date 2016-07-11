@@ -9,9 +9,11 @@
 let express = require('express');
 let app = express();
 
-//Allow cors
-let cors = require('cors');
-app.use(cors());
+// Whitelist Mixmax
+var corsOptions = {
+  origin: /^[^.\s]+\.mixmax\.com$/,
+  credentials: true
+};
 
 //Load up the Ascii Service class
 let asciify = require('./lib/ascii-service');
@@ -20,10 +22,10 @@ let asciify = require('./lib/ascii-service');
 app.set('port', (process.env.PORT || 5000));
 
 //Suggest endpoint
-app.get('/asciify/suggest', asciify.suggest);
+app.get('/asciify/suggest', cors(corsOptions), asciify.suggest);
 
 //Resolve endpoint
-app.get('/asciify/resolve', asciify.resolve);
+app.get('/asciify/resolve', cors(corsOptions), asciify.resolve);
 
 //Spin up server
 app.listen(app.get('port'), function() {
