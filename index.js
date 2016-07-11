@@ -11,7 +11,7 @@ let app = express();
 let cors = require('cors');
 
 //Whitelist Mixmax
-var corsOptions = {
+let corsOptions = {
 	origin: /^[^.\s]+\.mixmax\.com$/,
 	credentials: true
 };
