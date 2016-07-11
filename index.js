@@ -12,7 +12,7 @@ let app = express();
 // Whitelist Mixmax
 var corsOptions = {
   origin: /^[^.\s]+\.mixmax\.com$/,
-  credentials: true
+  credentials: false
 };
 
 //Load up the Ascii Service class
