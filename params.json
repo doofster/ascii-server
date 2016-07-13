@@ -1,0 +1,6 @@
+{
+  "name": "Ascii-server",
+  "tagline": "A server which delivers ASCII art through its API.",
+  "body": "# ascii-server\r\nA server which delivers ASCII art through its API. This is an open source Mixmax Slash Command. Visit http://sdk.mixmax.com/docs/overview-slash-commands for more information on Slash Commands.\r\n\r\n## Running locally\r\n\r\n1. Install using `npm install`\r\n2. Run using `npm start`\r\n\r\nTo simulate locally how Mixmax calls the typeahead URL (to return a JSON list of typeahead results), run:\r\n\r\n```\r\ncurl http://localhost:5000/asciify/suggest?text=cats\r\n```\r\n\r\nTo simulate locally how Mixmax calls the resolver URL (to return HTML that goes into the email), run:\r\n\r\n```\r\ncurl http://localhost:5000/asciify/resolve?text=cats\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
