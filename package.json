@@ -1,37 +1,36 @@
 {
-  "name": "ascii-server",
-  "version": "1.0.0",
-  "description": "A server which delivers ASCII art through its API.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/new-challenger/ascii-server.git"
-  },
-  "keywords": [
-    "ascii",
-    "nodejs",
-    "mixmax"
-  ],
-  "author": "Nico",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/new-challenger/ascii-server/issues"
-  },
-  "homepage": "https://github.com/new-challenger/ascii-server#readme",
-  "dependencies": {
-    "body-parser": "1.15.2",
-    "cors": "^2.7.1",
-    "express": "4.13.3",
-    "figlet": "^1.1.2"
-  },
-  "devDependencies": {
-    "grunt": "1.0.1",
-    "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-jsbeautifier": "0.2.12",
-    "jshint-stylish": "2.2.0"
-  }
+	"name": "ascii-server",
+	"version": "1.0.0",
+	"description": "A server which delivers ASCII art through its API.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/new-challenger/ascii-server.git"
+	},
+	"keywords": [
+		"ascii",
+		"nodejs",
+		"mixmax"
+	],
+	"author": "Nico",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/new-challenger/ascii-server/issues"
+	},
+	"homepage": "https://github.com/new-challenger/ascii-server#readme",
+	"dependencies": {
+		"cors": "^2.7.1",
+		"express": "4.13.3",
+		"figlet": "^1.1.2"
+	},
+	"devDependencies": {
+		"grunt": "1.0.1",
+		"grunt-contrib-jshint": "1.0.0",
+		"grunt-contrib-watch": "1.0.0",
+		"grunt-jsbeautifier": "0.2.12",
+		"jshint-stylish": "2.2.0"
+	}
 }
