@@ -23,10 +23,10 @@ var corsOptions = {
 app.set('port', (process.env.PORT || 5000));
 
 //Suggest endpoint
-app.post('/asciify/suggest', cors(corsOptions), asciify.suggest);
+app.get('/asciify/suggest', cors(corsOptions), asciify.suggest);
 
 //Resolve endpoint
-app.post('/asciify/resolve', cors(corsOptions), asciify.resolve);
+app.get('/asciify/resolve', cors(corsOptions), asciify.resolve);
 
 //Spin up server
 app.listen(app.get('port'), function() {
