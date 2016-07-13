@@ -11,22 +11,12 @@ let app = express();
 let cors = require('cors');
 let bodyParser = require('body-parser');
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://compose.mixmax.com");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors());
 
 // So we can POST.
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
-// Since Mixmax calls this API directly from the client-side, it must be whitelisted.
-let corsOptions = {
-  origin: 'https://compose.mixmax.com',
-  credentials: true
-};
 
 //Load up the Ascii Service class
 let asciify = require('./lib/ascii-service');
@@ -35,10 +25,10 @@ let asciify = require('./lib/ascii-service');
 app.set('port', (process.env.PORT || 5000));
 
 //Suggest endpoint
-app.post('/asciify/suggest', cors(corsOptions), asciify.suggest);
+app.post('/asciify/suggest', asciify.suggest);
 
 //Resolve endpoint
-app.post('/asciify/resolve', cors(corsOptions), asciify.resolve);
+app.post('/asciify/resolve', asciify.resolve);
 
 //Spin up server
 app.listen(app.get('port'), function() {
