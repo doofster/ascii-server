@@ -21,14 +21,18 @@ app.use(bodyParser.urlencoded({
 //Load up the Ascii Service class
 let asciify = require('./lib/ascii-service');
 
+var corsOptions = {
+  origin: 'https://compose.mixmax.com'
+};
+
 //Set port
 app.set('port', (process.env.PORT || 5000));
 
 //Suggest endpoint
-app.post('/asciify/suggest', asciify.suggest);
+app.post('/asciify/suggest', cors(corsOptions), asciify.suggest);
 
 //Resolve endpoint
-app.post('/asciify/resolve', asciify.resolve);
+app.post('/asciify/resolve', cors(corsOptions), asciify.resolve);
 
 //Spin up server
 app.listen(app.get('port'), function() {
