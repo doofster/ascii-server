@@ -1,5 +1,5 @@
 # ascii-server
-A server which delivers ASCII art through its API. This is an open source Mixmax Slash Command.
+A server which delivers ASCII art through its API. This is an open source Mixmax Slash Command. Visit http://sdk.mixmax.com/docs/overview-slash-commands for more information on Slash Commands.
 
 ## Running locally
 
