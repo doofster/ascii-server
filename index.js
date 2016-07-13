@@ -9,11 +9,17 @@
 let express = require('express');
 let app = express();
 let cors = require('cors');
+let bodyParser = require('body-parser');
 
-//Whitelist Mixmax
+// So we can POST.
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+// Since Mixmax calls this API directly from the client-side, it must be whitelisted.
 let corsOptions = {
-	origin: /^[^.\s]+\.mixmax\.com$/,
-	credentials: true
+  origin: /^[^.\s]+\.mixmax\.com$/,
+  credentials: true
 };
 
 //Load up the Ascii Service class
